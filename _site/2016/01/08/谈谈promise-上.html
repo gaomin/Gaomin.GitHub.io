@@ -33,7 +33,7 @@
 
 <p>1.promise是什么</p>
 
-<p>鑫旭大神在他的博客中提到，Promise是一种形式，我觉得有一点点抽象，暂且认为promise是一个对象</p>
+<p>鑫旭大神在他的博客中提到，Promise是一种形式，我觉得有一点点抽象，暂且认为promise是一个异步的对象，”延迟”到未来某个点再执行</p>
 
 <p>2.为什么需要promise</p>
 
@@ -165,7 +165,7 @@ promise.then(function(json) {
 });
 </code></pre>
 
-<p>写着写着就这么多了，看着好累，分成两节吧，下一节看看jQuery中的promise用法，以及内部实现，最后给个实例hapyy下吧（拿去跑跑呦）：</p>
+<p>写着写着就这么多了，看着好累，分成两节吧，下一节看看jQuery中的promise用法，以及内部实现，最后给个实例happy下吧（拿去跑跑呦）：</p>
 <pre><code>var money = 4;
 var buy = function(goods){
   return new Promise(function(resolve, reject){
@@ -173,7 +173,7 @@ var buy = function(goods){
       console.log('恭喜，您成功购买了'+ goods);
       money--;
       resolve();
-      return
+      return;
     }
     console.log('亲，余额不足了呦~');
   });
@@ -184,6 +184,14 @@ buy('书').then(buy('衣服'))
         .then(buy('房子'))
         .then(buy('买买买'));
 </code></pre>
+
+<p>当然，这个例子是很简单的，只是为了说明基本的用法，如果想要看比较复杂的代码，推荐阅读张鑫旭的相关Demo</p>
+
+<p><a href="http://www.zhangxinxu.com/study/201402/promise-2.html">Demo</a></p>
+
+<p>相关阅读：</p>
+
+<p><a href="http://www.zhangxinxu.com/wordpress/2014/02/es6-javascript-promise-感性认知/">ES6 JavaScript Promise的感性认知 —— 张鑫旭</a></p>
 
 <hr />
 
