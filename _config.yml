@@ -19,3 +19,9 @@
 
 # Build settings
 markdown: kramdown
+
+title: Gaomin.GitHub.io
+description: GM blog
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-leap-day
